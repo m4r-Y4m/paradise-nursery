@@ -1,0 +1,152 @@
+.products-page {
+  min-height: 100vh;
+  padding: 30px 6%;
+  background: #f4f8f1;
+}
+
+.products-header {
+  text-align: center;
+  padding: 35px 10px;
+}
+
+.products-header h1 {
+  color: #205b35;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.products-header p {
+  color: #555;
+  font-size: 17px;
+}
+
+.plant-category {
+  margin: 35px 0;
+}
+
+.plant-category h2 {
+  color: #28613a;
+  margin-bottom: 22px;
+  border-bottom: 2px solid #c8dfc9;
+  padding-bottom: 10px;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+}
+
+.plant-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.plant-details {
+  padding: 18px;
+  text-align: center;
+}
+
+.plant-details h3 {
+  color: #254b30;
+  margin-bottom: 10px;
+}
+
+.plant-price {
+  font-weight: bold;
+  color: #38834a;
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.add-cart-btn {
+  background: #287b3d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.add-cart-btn:hover:not(:disabled) {
+  background: #195b2c;
+}
+
+.add-cart-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6%;
+  background: #205b35;
+  color: white;
+}
+
+.nav-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.cart-count {
+  background: white;
+  color: #205b35;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .plant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-header h1 {
+    font-size: 28px;
+  }
+}
